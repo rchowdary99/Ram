@@ -52,3 +52,5 @@ resource "aws_iam_user_policy" "inline_policy_1" {
     ]
   })
 }
+
+# terraform code update
