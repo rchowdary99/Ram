@@ -1,7 +1,11 @@
-variable "bucket_name" {}
-variable "bucket_tag" {}
-variable "environment" {}
+variable "bucket_name" {
+  type = string
+}
 
-variable "versioning_status" {
-  default = "Enabled"
+variable "environment" {
+  type = string
+}
+
+variable "versioning_enabled" {
+  type = bool
 }
