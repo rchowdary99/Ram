@@ -1,6 +1,7 @@
 module "iam_policy" {
-
-  source = "../../../../modules/iam-policy"
+  #source = "D:/Ram/Study/Devops/terraform_new/common/modules/iam_policy"
+  source = "../../module/iam-policy"
+  
 
   environment = "dev"
 
