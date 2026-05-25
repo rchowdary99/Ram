@@ -1,5 +1,5 @@
 module "dev_iam_policy" {
-  source      = "../../module/iam_policies"
+  source = "../../../../modules/iam-policy"
   project     = "myapp"
   environment = "dev"
 

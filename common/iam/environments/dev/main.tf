@@ -1,6 +1,6 @@
 module "iam_policy" {
 
-  source = "../../modules/iam-policy"
+  source = "../../../../modules/iam-policy"
 
   environment = "dev"
 
