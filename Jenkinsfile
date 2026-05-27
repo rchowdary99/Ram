@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    tools {
-        terraform 'terraform'
-    }
-
     parameters {
         choice(
             name: 'ENVIRONMENT',
@@ -31,15 +27,21 @@ pipeline {
             }
         }
 
+        stage('Terraform Version') {
+            steps {
+                sh 'terraform --version'
+            }
+        }
+
         stage('Terraform Init') {
             steps {
                 dir("environments/${params.ENVIRONMENT}") {
 
-                    sh '''
+                    sh """
                     terraform init \
-                    -backend-config=backend-${ENVIRONMENT}.conf \
+                    -backend-config=backend-${params.ENVIRONMENT}.conf \
                     -reconfigure
-                    '''
+                    """
                 }
             }
         }
