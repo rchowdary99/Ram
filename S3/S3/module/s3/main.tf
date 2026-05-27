@@ -8,6 +8,10 @@ resource "aws_s3_bucket" "this" {
     GitHubRepo  = "https://github.com/rchowdary99/Ram.git"
     GitHubPath  = "S3/S3/module"
     GitHubBranch = "main"
+    Owner = "Ram"
+    Email="rdanda99@gmail.com"
+    Phone="73493680017"
+    Fax="27339799"
   }
 }
 
