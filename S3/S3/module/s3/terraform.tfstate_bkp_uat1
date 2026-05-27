@@ -1,0 +1,14 @@
+{
+  "version": 4,
+  "terraform_version": "1.13.1",
+  "serial": 1,
+  "lineage": "5b0484bd-50ac-5643-3b9a-dd9b945315e3",
+  "outputs": {
+    "bucket_name": {
+      "value": "company-uat-s3-bucket",
+      "type": "string"
+    }
+  },
+  "resources": [],
+  "check_results": null
+}

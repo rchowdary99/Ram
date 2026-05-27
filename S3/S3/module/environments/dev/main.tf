@@ -1,11 +1,11 @@
 provider "aws" {
-  region = "ap-south-1"
+  region = "us-east-1"
 }
 
 module "s3" {
-  source = "../../modules/s3"
-
-  bucket_name       = var.bucket_name
-  environment       = var.environment
-  versioning_enabled = false
+  source             = "../../s3"
+  bucket_name        = var.bucket_name
+  environment        = var.environment
+  versioning_enabled = var.versioning_enabled
+  enable_tls_only    = var.enable_tls_only
 }
